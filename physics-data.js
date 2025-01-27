@@ -57,9 +57,51 @@ export const physicsMatrix = {
         }
       ],
       conservation: "Total Energy = KE + PE = constant"
+    },
+    waves: {
+      properties: [
+        {
+          name: "Wave Speed",
+          formula: "v = fλ",
+          description: "Product of frequency and wavelength"
+        },
+        {
+          name: "Standing Waves",
+          formula: "f_n = (n * v)/(2L)",
+          description: "Frequencies of standing waves on a string"
+        }
+      ],
+      types: {
+        mechanical: ["Longitudinal", "Transverse", "Surface"],
+        characteristics: {
+          amplitude: "Maximum displacement from equilibrium",
+          frequency: "Oscillations per second",
+          wavelength: "Distance between repeating parts",
+          phase: "Position in cycle relative to reference"
+        }
+      },
+      phenomena: ["Interference", "Diffraction", "Reflection", "Refraction", "Doppler Effect"]
+    },
+    fluidDynamics: {
+      principles: [
+        {
+          name: "Bernoulli's Principle",
+          formula: "P + ½ρv² + ρgh = constant",
+          applications: ["Airplane Wings", "Atomizers", "Venturi Meter"]
+        },
+        {
+          name: "Pascal's Law",
+          formula: "ΔP = ρgh",
+          applications: ["Hydraulic Systems", "Blood Pressure"]
+        }
+      ],
+      viscosity: {
+        formula: "F = ηA(dv/dx)",
+        unit: "Pa·s",
+        description: "Fluid resistance to flow"
+      }
     }
   },
-  
   thermodynamics: {
     laws: [
       {
@@ -94,9 +136,40 @@ export const physicsMatrix = {
         unit: "Pascal (Pa)",
         laws: ["Boyle's Law", "Charles's Law", "Gay-Lussac's Law"]
       }
+    },
+    thermodynamicProcesses: {
+      isobaric: {
+        description: "Constant pressure process",
+        work: "W = PΔV"
+      },
+      isochoric: {
+        description: "Constant volume process",
+        work: "W = 0"
+      },
+      isothermal: {
+        description: "Constant temperature process",
+        work: "W = nRT ln(V₂/V₁)"
+      },
+      adiabatic: {
+        description: "No heat transfer",
+        relation: "PV^γ = constant"
+      }
+    },
+    heatTransfer: {
+      conduction: {
+        formula: "Q = -kA(dT/dx)",
+        description: "Heat transfer through direct contact"
+      },
+      convection: {
+        formula: "Q = hA(T₂ - T₁)",
+        description: "Heat transfer through fluid motion"
+      },
+      radiation: {
+        formula: "P = εσAT⁴",
+        description: "Heat transfer through electromagnetic waves"
+      }
     }
   },
-  
   electromagnetics: {
     electric: {
       coulombsLaw: {
@@ -127,9 +200,36 @@ export const physicsMatrix = {
       "∇⋅B = 0",
       "∇×E = -∂B/∂t",
       "∇×B = μ₀J + μ₀ε₀∂E/∂t"
-    ]
+    ],
+    circuits: {
+      laws: {
+        ohm: {
+          formula: "V = IR",
+          description: "Relationship between voltage, current, and resistance"
+        },
+        kirchhoff: {
+          current: "ΣI = 0 at any node",
+          voltage: "ΣV = 0 around any closed loop"
+        }
+      },
+      components: {
+        resistors: {
+          series: "R_total = R₁ + R₂ + ...",
+          parallel: "1/R_total = 1/R₁ + 1/R₂ + ..."
+        },
+        capacitors: {
+          formula: "C = Q/V",
+          energy: "U = ½CV²",
+          series: "1/C_total = 1/C₁ + 1/C₂ + ...",
+          parallel: "C_total = C₁ + C₂ + ..."
+        },
+        inductors: {
+          formula: "V = L(dI/dt)",
+          energy: "U = ½LI²"
+        }
+      }
+    }
   },
-  
   quantum: {
     concepts: {
       waveFunctions: {
@@ -158,9 +258,30 @@ export const physicsMatrix = {
         mass: "1.675×10⁻²⁷ kg",
         charge: "0 C"
       }
+    },
+    atomicPhysics: {
+      models: {
+        bohr: {
+          energyLevels: "E_n = -13.6eV/n²",
+          description: "Quantized orbital model of hydrogen"
+        },
+        quantum: {
+          orbital: "ψ_nlm(r,θ,φ)",
+          quantumNumbers: ["Principal (n)", "Angular (l)", "Magnetic (m)", "Spin (s)"]
+        }
+      },
+      spectroscopy: {
+        transitions: {
+          formula: "ΔE = hf",
+          series: ["Lyman", "Balmer", "Paschen"]
+        }
+      }
+    },
+    quantumEntanglement: {
+      properties: ["Non-locality", "Quantum Teleportation", "Bell's Inequality"],
+      applications: ["Quantum Computing", "Quantum Cryptography"]
     }
   },
-  
   relativity: {
     special: {
       postulates: [
@@ -186,6 +307,27 @@ export const physicsMatrix = {
         "Frame Dragging",
         "Gravitational Waves"
       ]
+    },
+    cosmology: {
+      bigBang: {
+        events: ["Inflation", "Nucleosynthesis", "Recombination"],
+        evidence: ["Cosmic Microwave Background", "Galaxy Redshift", "Light Element Abundances"]
+      },
+      expansion: {
+        hubbleLaw: "v = H₀d",
+        darkEnergy: {
+          effects: ["Accelerating Expansion", "Cosmic Scale Factor"],
+          properties: ["Negative Pressure", "Uniform Distribution"]
+        }
+      },
+      blackHoles: {
+        properties: {
+          schwarzschildRadius: "R_s = 2GM/c²",
+          hawkingRadiation: "T = ℏc³/(8πGMk_B)",
+          singularity: "Space-time curvature becomes infinite"
+        },
+        types: ["Stellar", "Supermassive", "Primordial"]
+      }
     }
   }
 };
