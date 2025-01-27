@@ -536,7 +536,7 @@ export const physicsMatrix = {
       },
       hydrogenAtom: {
         energy: "Eₙ = -13.6 eV/n²",
-        wavefunctions: "ψₙₗₘ(r,θ,φ) = Rₙₗ(r)Yₗₘ(θ,φ)",
+        wavefunctions: "ψ_nlm(r,θ,φ) = R_nlm(r)Y_lmm(θ,φ)",
         quantumNumbers: {
           principal: "n ≥ 1",
           angular: "0 ≤ l ≤ n-1",
